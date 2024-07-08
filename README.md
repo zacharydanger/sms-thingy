@@ -14,4 +14,4 @@ Then run `bin/dev` to start your server at https://localhost:3000
 
 ## Etc
 
-This took, roughly 2 hours all-in. I wanted to write RSpec tests, but the only thing that's not rote Rails here is Twilio. 😉
+This took, roughly 90 minutes coding all-in. I wanted to write RSpec tests, but the only thing that's not rote Rails here is Twilio. 😉
