@@ -1,3 +1,3 @@
 class Subscriber < ApplicationRecord
-  validates_presence_of :phone_number
+  validates :phone_number, presence: true, uniqueness: true
 end
