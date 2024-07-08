@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a pretty standard Rails app, assuming you've got Ruby 3.3 installed, setup is as simple as:
 
-Things you may want to cover:
+```
+bundle install
+bundle exec rails db:setup
+cp .env.template .env
+```
 
-* Ruby version
+Edit `.env` with your Twilio credentials.
 
-* System dependencies
+Then run `bin/dev` to start your server at https://localhost:3000
 
-* Configuration
+## Etc
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This took, roughly 2 hours all-in. I wanted to write RSpec tests, but the only thing that's not rote Rails here is Twilio. 😉
