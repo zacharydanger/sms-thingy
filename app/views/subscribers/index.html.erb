@@ -1,4 +1,15 @@
-<div>
-  <h1 class="font-bold text-4xl">Subscribers#index</h1>
-  <p>Find me in app/views/subscribers/index.html.erb</p>
+<div class="flex flex-col container max-w-lg mx-auto">
+  <div>
+    <h1 class="font-bold text-4xl">Subscribe to the thing.</h1>
+    <p>We'll send you SMS messages.</p>
+  </div>
+
+  <div>
+    <%= form_for Subscriber.new do |f| %>
+      <%= f.label :phone_number, class: %w(block) %>
+      <%= f.telephone_field :phone_number, placeholder: '123-456-7890', class: %w(p-4) %>
+
+      <%= f.submit "Subscribe", class: %w(bg-slate-500 p-4 text-white) %>
+    <% end %>
+  </div>
 </div>
