@@ -1,0 +1,6 @@
+<%= form_for subscriber do |f| %>
+  <%= f.label :phone_number, class: %w(block) %>
+  <%= f.telephone_field :phone_number, placeholder: '123-456-7890', class: %w(p-4) %>
+
+  <%= f.submit "Subscribe", class: %w(bg-slate-500 p-4 text-white) %>
+<% end %>
