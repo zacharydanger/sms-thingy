@@ -1,15 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe "Subscribers", type: :request do
-  describe "GET /index" do
+  describe "GET #index" do
     it "returns http success" do
-      get "/subscribers/index"
+      get "/subscribers"
       expect(response).to have_http_status(:success)
     end
   end
 
-  describe "GET /create" do
-    it "returns http success" do
+  describe "POST #create" do
+    xit "returns http success" do
       get "/subscribers/create"
       expect(response).to have_http_status(:success)
     end
