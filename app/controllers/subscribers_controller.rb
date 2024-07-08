@@ -1,4 +1,8 @@
 class SubscribersController < ApplicationController
+  def index
+    @subscribers = Subscriber.order("created_at DESC").limit(10) # TODO: paginate ;D
+  end
+
   def new
     @subscriber = Subscriber.new
   end
