@@ -1,0 +1,5 @@
+<%= turbo_stream.update "subscribers/new" do %>
+  <%= render "form", subscriber: @subscriber %>
+<% end %>
+
+<%= turbo_stream.prepend "flash", partial: "shared/flash" %>
