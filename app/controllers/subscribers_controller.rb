@@ -7,6 +7,8 @@ class SubscribersController < ApplicationController
     @subscriber = Subscriber.new(subscriber_params)
 
     if @subscriber.save
+      SendWelcomeSmsJob.perform_later(phone_number: @subscriber.phone_number)
+
       respond_to do |format|
         format.html { redirect_to action: :index, notice: "Subscriber created!" }
         format.turbo_stream { flash.now[:notice] = "Subscriber created!" }
