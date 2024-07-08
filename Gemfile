@@ -66,3 +66,5 @@ group :development do
 end
 
 gem "twilio-ruby"
+
+gem "dotenv-rails"
